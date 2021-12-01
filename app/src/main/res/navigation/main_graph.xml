@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.taswaq.presentation.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/main_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.taswaq.presentation.home.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_seeProductsOfTitle"
+            app:destination="@id/seeAllFeaturedOrBestSellerFragment" />
+        <action
+            android:id="@+id/action_home_to_seeAllCategories"
+            app:destination="@id/seeAllCategoriesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeAllFeaturedOrBestSellerFragment"
+        android:name="com.example.taswaq.presentation.seeproductsoftitle.view.SeeProductsOfTitleFragment"
+        android:label="SeeAllFeaturedOrBestSellerFragment"
+        tools:layout="@layout/fragment_see_products_of_title">
+
+        <argument
+            android:name="products_type"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_seeAllFeaturedOrBestSellerFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeAllCategoriesFragment"
+        android:name="com.example.taswaq.presentation.seeallcategories.view.SeeAllCategoriesFragment"
+        android:label="SeeAllCategoriesFragment"
+        tools:layout="@layout/fragment_see_all_categories" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.taswaq.presentation.productdetails.view.ProductDetailsFragment"
+        android:label="ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="product_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/navigate_to_ProductDetails"
+        app:destination="@id/productDetailsFragment" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.taswaq.presentation.auth.welcome.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_signIn"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_welcome_to_signUp"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.taswaq.presentation.auth.signin.LogInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logIn_to_signUp"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.taswaq.presentation.auth.signup.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_signIn"
+            app:destination="@id/signInFragment" />
+    </fragment>
+
+
+</navigation>

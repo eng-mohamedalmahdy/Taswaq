@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.productive.view.ProductDetailsFragment">
+
+        <!--        Guide lines-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/page_start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_18sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/page_end_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_18sdp" />
+
+        <!--        Product images-->
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/product_images"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/gradient_blue"
+            app:iss_auto_cycle="true"
+            app:iss_delay="1500"
+            app:iss_error_image="@drawable/ic_cart"
+            app:iss_placeholder="@drawable/ic_cart"
+            app:iss_selected_dot="@drawable/dot_blue"
+            app:iss_title_background="@null"
+            app:iss_unselected_dot="@drawable/dot_white"
+            app:layout_constraintEnd_toEndOf="@id/page_end_guideline"
+            app:layout_constraintStart_toStartOf="@id/page_start_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/add_to_wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_wishlist"
+            app:layout_constraintEnd_toEndOf="@id/product_images"
+            app:layout_constraintTop_toTopOf="@id/product_images"
+            app:tint="@color/white" />
+
+        <!--        Product title-->
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:text="Product Title"
+            android:textColor="@color/text_gray_434343"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintEnd_toEndOf="@id/page_end_guideline"
+            app:layout_constraintStart_toStartOf="@id/page_start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/product_images" />
+
+        <!--        Product Price-->
+        <TextView
+            android:id="@+id/price_after_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="20$"
+            android:textColor="@color/blue_667EEA"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="@id/page_end_guideline"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/page_start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/product_name" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/price_before_discount_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@id/price_after_discount"
+            app:layout_constraintStart_toEndOf="@id/price_after_discount"
+            app:layout_constraintTop_toTopOf="@id/price_after_discount">
+
+            <TextView
+                android:id="@+id/price_before_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="15$"
+                android:textColor="@color/text_gray_434343"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:background="@color/text_gray_434343"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        Product rate-->
+        <View
+            android:id="@+id/rate_top_separator"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:alpha=".5"
+            android:background="@color/separator_gray_707070"
+            app:layout_constraintTop_toBottomOf="@id/price_after_discount" />
+
+        <TextView
+            android:id="@+id/word_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="@string/rate"
+            android:textColor="@color/blue_667EEA"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintStart_toStartOf="@id/page_start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/rate_top_separator" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:cardBackgroundColor="@color/blue_667EEA"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/word_rate"
+            app:layout_constraintStart_toEndOf="@id/word_rate"
+            app:layout_constraintTop_toTopOf="@id/word_rate">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:text="4.5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/comment_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:src="@drawable/ic_comment"
+            app:layout_constraintBottom_toBottomOf="@id/word_rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/word_rate"
+            app:tint="@color/blue_667EEA" />
+
+        <TextView
+            android:id="@+id/review_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="@string/reviews"
+            android:textColor="@color/blue_667EEA"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/word_rate"
+            app:layout_constraintEnd_toStartOf="@id/comment_image"
+            app:layout_constraintTop_toTopOf="@id/word_rate" />
+
+        <TextView
+            android:id="@+id/reviews_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="49"
+            android:textColor="@color/blue_667EEA"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/word_rate"
+            app:layout_constraintEnd_toStartOf="@id/review_word"
+            app:layout_constraintTop_toTopOf="@id/word_rate" />
+
+        <View
+            android:id="@+id/rate_bottom_separator"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:alpha=".5"
+            android:background="@color/separator_gray_707070"
+            app:layout_constraintTop_toBottomOf="@id/word_rate" />
+
+
+        <TextView
+            android:id="@+id/word_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_21sdp"
+            android:text="@string/description"
+            android:textColor="@color/text_gray_434343"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@id/page_start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/rate_bottom_separator" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:maxLines="5"
+            android:minLines="5"
+            android:text="A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine."
+            android:textColor="@color/text_gray_434343"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@id/page_end_guideline"
+            app:layout_constraintStart_toStartOf="@id/page_start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/word_description" />
+
+        <Button
+            android:id="@+id/add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_minus4sdp"
+            android:text="@string/add_to_cart"
+            android:textSize="@dimen/_18ssp"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

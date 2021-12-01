@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Taswaq</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_your_product">Search Your Product</string>
+    <string name="categories">Categories</string>
+    <string name="see_all">See all</string>
+    <string name="featured">Featured</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="rate">Rate</string>
+    <string name="reviews">Reviews</string>
+    <string name="description">Description</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="sign_up">Sign up</string>
+    <string name="welcome_to_taswaq">Welcome to Taswaq</string>
+    <string name="explore_with_us">Sign in to Explore us</string>
+    <string name="log_in">Log in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don’t have an account ?</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
 </resources>
