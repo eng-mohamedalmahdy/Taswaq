@@ -131,6 +131,16 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:ccp_defaultPhoneCode="20"
+            app:layout_constraintEnd_toEndOf="@id/page_end_guideline"
+            app:layout_constraintStart_toStartOf="@id/page_start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/email_container" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_container"
             android:layout_width="0dp"
@@ -145,7 +155,7 @@
             app:hintTextColor="@color/hint_gray_818181"
             app:layout_constraintEnd_toEndOf="@id/page_end_guideline"
             app:layout_constraintStart_toStartOf="@id/page_start_guideline"
-            app:layout_constraintTop_toBottomOf="@id/email_container"
+            app:layout_constraintTop_toBottomOf="@id/phone_number"
             app:layout_constraintVertical_bias=".25"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/hint_gray_818181">

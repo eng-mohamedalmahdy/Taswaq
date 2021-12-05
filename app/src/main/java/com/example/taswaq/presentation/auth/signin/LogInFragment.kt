@@ -10,6 +10,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LogInFragment : BaseFragment<FragmentLogInBinding>() {
     override val layoutId = R.layout.fragment_log_in
+    override val drawerIcon: Int = R.drawable.ic_back
     val viewModel: LogInViewModel by viewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

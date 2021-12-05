@@ -21,4 +21,10 @@
     <string name="already_have_an_account">Already have an account ?</string>
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="my_orders">My Orders</string>
+    <string name="settings">Settings</string>
+    <string name="my_orders">My Orders</string>
 </resources>

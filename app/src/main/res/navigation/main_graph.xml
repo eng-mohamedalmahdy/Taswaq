@@ -25,7 +25,11 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_home_to_seeProductsOfTitle"
-            app:destination="@id/seeAllFeaturedOrBestSellerFragment" />
+            app:destination="@id/seeProductsOfTitleFragment">
+            <argument
+                android:name="products_type"
+                app:argType="string" />
+        </action>
         <action
             android:id="@+id/action_home_to_seeAllCategories"
             app:destination="@id/seeAllCategoriesFragment" />
@@ -34,13 +38,14 @@
             app:destination="@id/productDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/seeAllFeaturedOrBestSellerFragment"
+        android:id="@+id/seeProductsOfTitleFragment"
         android:name="com.example.taswaq.presentation.seeproductsoftitle.view.SeeProductsOfTitleFragment"
         android:label="SeeAllFeaturedOrBestSellerFragment"
         tools:layout="@layout/fragment_see_products_of_title">
 
         <argument
             android:name="products_type"
+            android:defaultValue="WISHLIST"
             app:argType="string" />
         <action
             android:id="@+id/action_seeAllFeaturedOrBestSellerFragment_to_productDetailsFragment"
@@ -71,7 +76,7 @@
         android:id="@+id/welcomeFragment"
         android:name="com.example.taswaq.presentation.auth.welcome.WelcomeFragment"
         android:label="WelcomeFragment"
-        tools:layout="@layout/fragment_welcome" >
+        tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcome_to_signIn"
             app:destination="@id/signInFragment" />
@@ -83,7 +88,7 @@
         android:id="@+id/signInFragment"
         android:name="com.example.taswaq.presentation.auth.signin.LogInFragment"
         android:label="SignInFragment"
-        tools:layout="@layout/fragment_log_in" >
+        tools:layout="@layout/fragment_log_in">
         <action
             android:id="@+id/action_logIn_to_signUp"
             app:destination="@id/signUpFragment" />
@@ -92,11 +97,16 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.taswaq.presentation.auth.signup.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUp_to_signIn"
             app:destination="@id/signInFragment" />
     </fragment>
+    <fragment
+        tools:layout="@layout/fragment_wishlist"
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.taswaq.presentation.wishlist.WishlistFragment"
+        android:label="WishlistFragment" />
 
 
 </navigation>

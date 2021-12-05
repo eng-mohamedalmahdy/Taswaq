@@ -14,4 +14,13 @@
         <!-- Customize your theme here. -->
         <item name="android:forceDarkAllowed" tools:targetApi="Q">false</item>
     </style>
+    <style name="Theme.Taswaq.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Taswaq.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Taswaq.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

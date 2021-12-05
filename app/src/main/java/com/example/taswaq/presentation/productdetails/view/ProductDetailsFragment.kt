@@ -9,8 +9,11 @@ import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentProductDetailsBinding
+import com.example.taswaq.domain.isUserAuthenticated
 import com.example.taswaq.presentation.core.BaseFragment
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -18,6 +21,8 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
 
     private val viewModel: ProductDetailsViewModel by viewModel()
     override val layoutId = R.layout.fragment_product_details
+    override val drawerIcon: Int = R.drawable.ic_back
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -45,7 +50,16 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
             }
 
             addToCart.setOnClickListener {
-                findNavController().navigate(ProductDetailsFragmentDirections.actionProductDetailsFragmentToWelcomeFragment())
+                viewLifecycleOwner.lifecycleScope.launchWhenCreated {
+                    requireContext().isUserAuthenticated.collectLatest { authed: Boolean ->
+                        if (!authed)
+                            findNavController().navigate(ProductDetailsFragmentDirections.actionProductDetailsFragmentToWelcomeFragment())
+                        else {
+
+                        }
+                    }
+
+                }
             }
         }
     }

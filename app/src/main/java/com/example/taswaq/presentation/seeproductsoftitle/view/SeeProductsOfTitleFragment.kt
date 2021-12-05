@@ -17,6 +17,8 @@ class SeeProductsOfTitleFragment : BaseFragment<FragmentSeeProductsOfTitleBindin
 
 
     override val layoutId = R.layout.fragment_see_products_of_title
+    override val drawerIcon: Int = R.drawable.ic_back
+
     private lateinit var args: SeeProductsOfTitleFragmentArgs
     private val viewModel: SeeProductsOfTitleViewModel by viewModel()
 

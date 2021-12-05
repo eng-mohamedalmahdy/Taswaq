@@ -19,6 +19,7 @@ class SeeProductsOfTitleViewModel(
         when (productsType) {
             HomePageProductsListArgs.BEST_SELLER -> getApplication<Application>().getString(R.string.best_seller)
             HomePageProductsListArgs.FEATURED -> getApplication<Application>().getString(R.string.featured)
+            HomePageProductsListArgs.WISHLIST ->  getApplication<Application>().getString(R.string.wishlist)
             else -> ""
         }
 

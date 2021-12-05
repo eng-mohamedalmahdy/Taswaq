@@ -7,6 +7,7 @@ import com.example.taswaq.presentation.home.HomeViewModel
 import com.example.taswaq.presentation.productdetails.view.ProductDetailsViewModel
 import com.example.taswaq.presentation.seeallcategories.SeeAllCategoriesViewModel
 import com.example.taswaq.presentation.seeproductsoftitle.SeeProductsOfTitleViewModel
+import com.example.taswaq.presentation.wishlist.WishlistViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -44,4 +45,8 @@ val appModule = module {
     //Sign in
     single { LogInRepository() }
     viewModel { LogInViewModel(get()) }
+
+    //wishlist
+    single { WishlistRepository() }
+    viewModel { WishlistViewModel(get()) }
 }

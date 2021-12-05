@@ -18,6 +18,8 @@ import com.example.taswaq.presentation.core.BaseFragment
 class SplashFragment : BaseFragment<FragmentSplashBinding>() {
 
     override val layoutId = R.layout.fragment_splash
+    override val drawerIcon: Int? = null
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -16,6 +16,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SeeAllCategoriesFragment : BaseFragment<FragmentSeeAllCategoriesBinding>() {
     override val layoutId = R.layout.fragment_see_all_categories
+    override val drawerIcon: Int = R.drawable.ic_back
+
     private val viewModel: SeeAllCategoriesViewModel by viewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

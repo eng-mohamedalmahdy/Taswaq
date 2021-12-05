@@ -90,5 +90,11 @@ dependencies {
 
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    implementation 'com.hbb20:ccp:2.4.7'
+
+
+
 
 }

@@ -4,14 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.taswaq.R
 
 abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
 
     protected lateinit var binding: B
     abstract val layoutId: Int
+    abstract val drawerIcon: Int?
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,6 +26,15 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
             container,
             false
         )
+        if (drawerIcon != null) {
+
+            (activity as AppCompatActivity).supportActionBar?.setHomeAsUpIndicator(drawerIcon!!)
+            (activity as AppCompatActivity).supportActionBar?.show()
+
+        } else {
+            (activity as AppCompatActivity).supportActionBar?.hide()
+        }
+
         return binding.root
     }
 }

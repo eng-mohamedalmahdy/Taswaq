@@ -21,6 +21,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     private val TAG = "HomeFragment"
     override val layoutId = R.layout.fragment_home
+    override val drawerIcon: Int = R.drawable.ic_menu
     private val homeViewModel: HomeViewModel by viewModel()
 
 
