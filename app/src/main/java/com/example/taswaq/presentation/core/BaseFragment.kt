@@ -26,15 +26,22 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
             container,
             false
         )
-        if (drawerIcon != null) {
+        setupAppBar()
+        return binding.root
+    }
 
+    override fun onResume() {
+        super.onResume()
+        setupAppBar()
+    }
+
+    private fun setupAppBar() {
+        if (drawerIcon != null) {
             (activity as AppCompatActivity).supportActionBar?.setHomeAsUpIndicator(drawerIcon!!)
             (activity as AppCompatActivity).supportActionBar?.show()
 
         } else {
             (activity as AppCompatActivity).supportActionBar?.hide()
         }
-
-        return binding.root
     }
 }

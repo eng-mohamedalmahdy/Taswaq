@@ -2,6 +2,7 @@ package com.example.taswaq.domain
 
 import com.example.taswaq.presentation.common.model.Category
 import com.example.taswaq.presentation.common.model.Product
+import com.example.taswaq.presentation.myorders.model.Order
 import com.example.taswaq.presentation.productdetails.model.ProductDetailsModel
 
 val dummyCategories = listOf(
@@ -34,3 +35,5 @@ val dummyProductDetails = ProductDetailsModel(
     7.5,
     10
 )
+
+val dummyOrders = listOf<Order>()

@@ -11,7 +11,7 @@ import com.example.taswaq.R
 import com.example.taswaq.databinding.ListItemProductBinding
 import com.example.taswaq.presentation.common.model.Product
 
-class ProductsAdapter(private val products: List<Product>? = null) :
+class ProductsAdapter(private val products: List<Product>) :
     RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
 
@@ -24,9 +24,9 @@ class ProductsAdapter(private val products: List<Product>? = null) :
         )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
-        products?.let { holder.bind(it[position]) } ?: Unit
+        holder.bind(products[position])
 
-    override fun getItemCount() = products?.size ?: 0
+    override fun getItemCount() = products.size
 
     inner class ViewHolder(private val binding: ListItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {

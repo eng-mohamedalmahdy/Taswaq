@@ -103,10 +103,24 @@
             app:destination="@id/signInFragment" />
     </fragment>
     <fragment
-        tools:layout="@layout/fragment_wishlist"
         android:id="@+id/wishlistFragment"
         android:name="com.example.taswaq.presentation.wishlist.WishlistFragment"
-        android:label="WishlistFragment" />
+        android:label="WishlistFragment"
+        tools:layout="@layout/fragment_wishlist" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.taswaq.presentation.myorders.view.MyOrdersFragment"
+        android:label="MyOrdersFragment"
+        tools:layout="@layout/fragment_my_orders" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.taswaq.presentation.cart.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart" />
 
 
+    <action
+        android:id="@+id/action_to_cart"
+        app:destination="@id/cartFragment"
+        app:launchSingleTop="true" />
 </navigation>

@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.taswaq.application.*
 import com.example.taswaq.presentation.auth.signin.LogInViewModel
 import com.example.taswaq.presentation.home.HomeViewModel
+import com.example.taswaq.presentation.myorders.MyOrdersViewModel
 import com.example.taswaq.presentation.productdetails.view.ProductDetailsViewModel
 import com.example.taswaq.presentation.seeallcategories.SeeAllCategoriesViewModel
 import com.example.taswaq.presentation.seeproductsoftitle.SeeProductsOfTitleViewModel
@@ -49,4 +50,8 @@ val appModule = module {
     //wishlist
     single { WishlistRepository() }
     viewModel { WishlistViewModel(get()) }
+
+    //ordersList
+    single { MyOrdersRepository() }
+    viewModel { MyOrdersViewModel(get()) }
 }

@@ -11,7 +11,7 @@ import com.example.taswaq.R
 import com.example.taswaq.databinding.ListItemCategoryBinding
 
 
-class CategoriesAdapter(var categories: List<Category>? = null) :
+class CategoriesAdapter(var categories: List<Category>) :
     RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
 
@@ -21,13 +21,12 @@ class CategoriesAdapter(var categories: List<Category>? = null) :
             R.layout.list_item_category, parent, false
         )
     )
-    override fun getItemCount(): Int = categories?.size ?: 0
+
+    override fun getItemCount(): Int = categories.size
 
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int)
-            : Unit = categories?.let { holder.bind(it[position]) } ?: Unit
-
-
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) =
+        holder.bind(categories[position])
 
 
     inner class ViewHolder(private val binding: ListItemCategoryBinding) :

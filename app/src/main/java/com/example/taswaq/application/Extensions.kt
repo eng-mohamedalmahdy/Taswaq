@@ -30,3 +30,9 @@ fun interface OnMotionCompletedListener : MotionLayout.TransitionListener {
     }
 
 }
+
+operator fun <T> Collection<T>.get(subscript: T) =
+    this.first { it == subscript }
+
+fun <T> Collection<T>.getOrNull(subscript: T): T? =
+    firstOrNull { it == subscript }
