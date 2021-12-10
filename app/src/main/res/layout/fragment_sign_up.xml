@@ -171,13 +171,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:background="@drawable/gradient_blue_rounded_corners"
+            app:backgroundTint="@null"
             android:id="@+id/sign_up"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:layout_marginTop="@dimen/_46sdp"
             android:elevation="4dp"
-            android:paddingVertical="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_4sdp"
             android:text="@string/sign_up"
             android:textAllCaps="false"
             android:textSize="@dimen/_14ssp"

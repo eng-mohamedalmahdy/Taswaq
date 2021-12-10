@@ -114,7 +114,7 @@
         tools:layout="@layout/fragment_my_orders" />
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.example.taswaq.presentation.cart.CartFragment"
+        android:name="com.example.taswaq.presentation.cart.view.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart" />
 

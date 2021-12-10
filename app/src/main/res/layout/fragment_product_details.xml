@@ -33,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/_160sdp"
             android:layout_marginTop="@dimen/_16sdp"
-            android:background="@drawable/gradient_blue"
+            android:background="@drawable/gradient_blue_rounded_corners"
             app:iss_auto_cycle="true"
             app:iss_delay="1500"
             app:iss_error_image="@drawable/ic_cart"
@@ -146,6 +146,7 @@
             app:layout_constraintTop_toTopOf="@id/word_rate">
 
             <TextView
+                android:id="@+id/product_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_16sdp"

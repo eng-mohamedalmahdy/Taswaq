@@ -9,9 +9,9 @@ import com.bumptech.glide.Glide
 import com.example.taswaq.MainGraphDirections
 import com.example.taswaq.R
 import com.example.taswaq.databinding.ListItemProductBinding
-import com.example.taswaq.presentation.common.model.Product
+import com.example.taswaq.presentation.common.model.PresentationProduct
 
-class ProductsAdapter(private val products: List<Product>) :
+class ProductsAdapter(private val products: List<PresentationProduct>) :
     RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
 
@@ -30,7 +30,7 @@ class ProductsAdapter(private val products: List<Product>) :
 
     inner class ViewHolder(private val binding: ListItemProductBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(product: Product) {
+        fun bind(product: PresentationProduct) {
             with(binding) {
                 productName.text = product.name
                 productPrice.text = ("\$${product.price}")

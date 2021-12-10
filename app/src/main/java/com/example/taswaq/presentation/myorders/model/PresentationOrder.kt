@@ -3,7 +3,7 @@ package com.example.taswaq.presentation.myorders.model
 import com.example.taswaq.R
 
 
-data class Order(
+data class PresentationOrder(
     val orderThumbnail: String,
     val orderDate: String,
     val orderStatus: OrderStatus,

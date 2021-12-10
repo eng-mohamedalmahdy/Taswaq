@@ -1,6 +1,7 @@
 package com.example.taswaq.presentation.productdetails.model
 
-data class ProductDetailsModel(
+data class PresentationProductDetails(
+    val productId: Int,
     val imagesUrls: List<String>,
     val productTitle: String,
     val productPriceBeforeDiscount: Double,

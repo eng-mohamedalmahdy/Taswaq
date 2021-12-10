@@ -7,6 +7,8 @@
         <entry key="app/src/main/res/drawable/dot_blue.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/drawable/dot_white.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/drawable/gradient_blue.xml" value="0.16296296296296298" />
+        <entry key="app/src/main/res/drawable/gradient_blue_rounded_corners.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/drawable/grey_rounded_corner.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/drawable/ic_app_bar_cart.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_cart.xml" value="0.19322916666666667" />
@@ -20,8 +22,9 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19" />
-        <entry key="app/src/main/res/layout/fragment_log_in.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_log_in.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_my_orders.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/fragment_product_details.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/fragment_see_all_categories.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/fragment_see_all_featured_or_best_seller.xml" value="0.17708333333333334" />
@@ -30,6 +33,8 @@
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.12" />
         <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/fragment_wishlist.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_menu_cart.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_cart.xml" value="0.25" />
         <entry key="app/src/main/res/layout/list_item_category.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/list_item_category_home.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/list_item_featured_home.xml" value="0.17708333333333334" />

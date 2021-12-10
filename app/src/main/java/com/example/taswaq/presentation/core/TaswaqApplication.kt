@@ -3,6 +3,7 @@ package com.example.taswaq.presentation.core
 import android.app.Application
 import com.example.taswaq.application.*
 import com.example.taswaq.presentation.auth.signin.LogInViewModel
+import com.example.taswaq.presentation.common.viewmodel.CartViewModel
 import com.example.taswaq.presentation.home.HomeViewModel
 import com.example.taswaq.presentation.myorders.MyOrdersViewModel
 import com.example.taswaq.presentation.productdetails.view.ProductDetailsViewModel
@@ -41,7 +42,7 @@ val appModule = module {
 
     //Product details
     single { ProductDetailsRepository() }
-    viewModel { ProductDetailsViewModel(get()) }
+    viewModel { params -> ProductDetailsViewModel(get(), params.get()) }
 
     //Sign in
     single { LogInRepository() }
@@ -54,4 +55,8 @@ val appModule = module {
     //ordersList
     single { MyOrdersRepository() }
     viewModel { MyOrdersViewModel(get()) }
+
+    //Cart
+    single { CartRepository() }
+    viewModel { CartViewModel(get()) }
 }

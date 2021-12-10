@@ -3,7 +3,7 @@ package com.example.taswaq.presentation.common.view
 import android.graphics.Color
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.taswaq.presentation.common.model.Category
+import com.example.taswaq.presentation.common.model.PresentationCategory
 import android.view.LayoutInflater
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
@@ -11,7 +11,7 @@ import com.example.taswaq.R
 import com.example.taswaq.databinding.ListItemCategoryBinding
 
 
-class CategoriesAdapter(var categories: List<Category>) :
+class CategoriesAdapter(var categories: List<PresentationCategory>) :
     RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
 
@@ -31,7 +31,7 @@ class CategoriesAdapter(var categories: List<Category>) :
 
     inner class ViewHolder(private val binding: ListItemCategoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(category: Category) {
+        fun bind(category: PresentationCategory) {
             with(binding) {
                 categoryName.text = category.name
                 categoryColorOverlay.setBackgroundColor(Color.parseColor(category.color))

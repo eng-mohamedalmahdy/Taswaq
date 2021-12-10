@@ -25,7 +25,7 @@ private object DataStoreKeys {
 }
 
 val Context.isUserAuthenticated: Flow<Boolean>
-    get() = this.dataStore.data.map { it[IS_AUTHENTICATED] ?: false }
+    get() = this.dataStore.data.map { it[IS_AUTHENTICATED] ?: true }
 
 suspend fun Context.setUserAuthenticated(newValue: Boolean) =
     this.dataStore.edit { it[IS_AUTHENTICATED] = newValue }

@@ -9,7 +9,7 @@ import com.example.taswaq.presentation.core.BaseFragment
 
 class WelcomeFragment : BaseFragment<FragmentWelcomeBinding>() {
     override val layoutId = R.layout.fragment_welcome
-    override val drawerIcon: Int? = null
+    override val drawerIcon: Int = R.drawable.ic_back
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

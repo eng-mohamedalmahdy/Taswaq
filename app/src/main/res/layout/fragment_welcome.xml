@@ -57,12 +57,14 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <Button
+            android:background="@drawable/gradient_blue_rounded_corners"
+            app:backgroundTint="@null"
             android:id="@+id/log_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_16sdp"
             android:paddingHorizontal="@dimen/_80sdp"
-            android:paddingVertical="@dimen/_12sdp"
+            android:paddingVertical="@dimen/_4sdp"
             android:text="@string/log_in"
             android:textAllCaps="false"
             android:textSize="@dimen/_12ssp"

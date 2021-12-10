@@ -37,4 +37,7 @@
     <string name="shipping">Shipping</string>
     <string name="cancelled">Cancelled</string>
     <string name="cart">Cart</string>
+    <string name="continue_word">Continue</string>
+    <string name="item_image">Item Image</string>
+    <string name="added_to_cart">Added to Cart</string>
 </resources>
