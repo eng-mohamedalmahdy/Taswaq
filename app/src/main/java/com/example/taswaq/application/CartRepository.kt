@@ -3,6 +3,7 @@ package com.example.taswaq.application
 import com.example.taswaq.domain.model.DomainCart
 
 class CartRepository {
+    //TODO Make it Domain cart item
     fun getCartItems() = DomainCart.cartItems
 
     fun getCartItemsCount() = DomainCart.itemsCount

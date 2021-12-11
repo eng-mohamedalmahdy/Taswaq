@@ -29,6 +29,7 @@ class TaswaqApplication : Application() {
 
 val appModule = module {
     //Home Page
+    //single factory viewModel
     single { HomeRepository() }
     viewModel { HomeViewModel(get()) }
 

@@ -26,6 +26,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.nikartm.support.ImageBadgeView
 
 private const val TAG = "MainActivity"
+
 class MainActivity : AppCompatActivity() {
     private lateinit var mAppBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -73,10 +74,7 @@ class MainActivity : AppCompatActivity() {
                 .navigate(MainGraphDirections.actionToCart())
         }
         lifecycleScope.launch {
-            cartViewModel.getCartItemsCount().collectLatest {
-                badgeView.badgeValue = it
-                Log.d(TAG, "onCreateOptionsMenu: $it")
-            }
+            cartViewModel.getCartItemsCount().collectLatest(badgeView::setBadgeValue)
         }
         return true
     }

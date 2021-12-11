@@ -13,26 +13,21 @@ fun interface OnMotionCompletedListener : MotionLayout.TransitionListener {
         endId: Int,
         progress: Float
     ) {
-
     }
 
-    override fun onTransitionStarted(motionLayout: MotionLayout?, startId: Int, endId: Int) {
-
-    }
+    override fun onTransitionStarted(motionLayout: MotionLayout?, startId: Int, endId: Int) {}
 
     override fun onTransitionTrigger(
         motionLayout: MotionLayout?,
         triggerId: Int,
         positive: Boolean,
         progress: Float
-    ) {
-
-    }
+    ) {}
 
 }
 
 operator fun <T> Collection<T>.get(subscript: T) =
-    this.first { it == subscript }
+    first { it == subscript }
 
 fun <T> Collection<T>.getOrNull(subscript: T): T? =
     firstOrNull { it == subscript }

@@ -2,10 +2,12 @@ package com.example.taswaq.presentation.seeproductsoftitle
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.taswaq.R
 import com.example.taswaq.application.SeeProductsOfTypeRepository
 import com.example.taswaq.application.constants.HomePageProductsListArgs
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
 
 class SeeProductsOfTitleViewModel(
     application: Application,
@@ -19,8 +21,10 @@ class SeeProductsOfTitleViewModel(
         when (productsType) {
             HomePageProductsListArgs.BEST_SELLER -> getApplication<Application>().getString(R.string.best_seller)
             HomePageProductsListArgs.FEATURED -> getApplication<Application>().getString(R.string.featured)
-            HomePageProductsListArgs.WISHLIST ->  getApplication<Application>().getString(R.string.wishlist)
-            else -> ""
+            HomePageProductsListArgs.WISHLIST -> getApplication<Application>().getString(R.string.wishlist)
+            else -> productsType.replaceFirstChar { it.uppercaseChar() }
         }
 
+
 }
+
