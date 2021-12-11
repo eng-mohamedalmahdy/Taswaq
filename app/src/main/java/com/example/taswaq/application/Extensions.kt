@@ -31,3 +31,5 @@ operator fun <T> Collection<T>.get(subscript: T) =
 
 fun <T> Collection<T>.getOrNull(subscript: T): T? =
     firstOrNull { it == subscript }
+
+fun testPullRequest(){}
