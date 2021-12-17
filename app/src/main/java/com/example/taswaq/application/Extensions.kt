@@ -1,6 +1,7 @@
 package com.example.taswaq.application
 
 import android.os.Handler
+import android.widget.EditText
 import androidx.constraintlayout.motion.widget.MotionLayout
 
 fun Handler.postDelayed(timeInMills: Long, action: () -> Unit) =
@@ -36,3 +37,9 @@ operator fun <T> Collection<T>.get(subscript: T) =
 
 fun <T> Collection<T>.getOrNull(subscript: T): T? =
     firstOrNull { it == subscript }
+
+
+ fun EditText.contentAsString(): String = this.text.toString()
+
+
+

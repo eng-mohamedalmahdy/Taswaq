@@ -2,6 +2,8 @@ package com.example.taswaq.presentation.core
 
 import android.app.Application
 import com.example.taswaq.application.*
+import com.example.taswaq.presentation.address.viewmodel.AddressViewModel
+import com.example.taswaq.presentation.address.viewmodel.CreateAddressViewModel
 import com.example.taswaq.presentation.auth.signin.LogInViewModel
 import com.example.taswaq.presentation.common.viewmodel.CartViewModel
 import com.example.taswaq.presentation.home.HomeViewModel
@@ -59,4 +61,12 @@ val appModule = module {
     //Cart
     single { CartRepository() }
     viewModel { CartViewModel(get()) }
+
+   //CreateAddress
+    single { CreateAddressRepository() }
+    viewModel { CreateAddressViewModel(get()) }
+
+    //Address
+    single { AddressRepository() }
+    viewModel { AddressViewModel(get()) }
 }

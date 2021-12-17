@@ -1,5 +1,6 @@
 package com.example.taswaq.application.adapters
 
+import com.example.taswaq.domain.model.DomainAddress
 import com.example.taswaq.domain.model.DomainProduct
 import com.example.taswaq.presentation.common.model.PresentationProduct
 import com.example.taswaq.presentation.productdetails.model.PresentationProductDetails
@@ -23,3 +24,7 @@ fun domainProductToPresentationProductDetails(domainProduct: DomainProduct) =
         productReviewsCount = domainProduct.rateCount,
         productRate = domainProduct.rate
     )
+
+ fun domainAddressToPresentationAddress(domainAddress: DomainAddress){
+
+ }

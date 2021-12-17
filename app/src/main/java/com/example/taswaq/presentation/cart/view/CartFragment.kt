@@ -3,6 +3,7 @@ package com.example.taswaq.presentation.cart.view
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentCartBinding
 import com.example.taswaq.presentation.common.viewmodel.CartViewModel
@@ -29,6 +30,9 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
             viewLifecycleOwner.lifecycleScope.launchWhenCreated {
                 viewModel.getCartItems().collect(cartAdapter::submitList)
             }
+           continueBtn.setOnClickListener {
+               findNavController().navigate(CartFragmentDirections.actionCartFragmentToAddressFragment())
+           }
         }
     }
 

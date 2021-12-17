@@ -40,4 +40,11 @@
     <string name="continue_word">Continue</string>
     <string name="item_image">Item Image</string>
     <string name="added_to_cart">Added to Cart</string>
+    <string name="create_address">Create Address</string>
+    <string name="notes">Notes</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="city">City</string>
+    <string name="address_lane">Address lane</string>
+    <string name="name">Name</string>
+    <string name="continue_to_payment">Continue To Payment</string>
 </resources>

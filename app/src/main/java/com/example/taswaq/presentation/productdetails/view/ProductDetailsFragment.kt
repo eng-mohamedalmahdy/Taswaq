@@ -72,7 +72,8 @@ class ProductDetailsFragment : BaseFragment<FragmentProductDetailsBinding>() {
                 viewLifecycleOwner.lifecycleScope.launchWhenCreated {
                     requireContext().isUserAuthenticated.collectLatest { authed: Boolean ->
                         if (!authed)
-                            findNavController().navigate(ProductDetailsFragmentDirections.actionProductDetailsFragmentToWelcomeFragment())
+                            findNavController().navigate(ProductDetailsFragmentDirections
+                                               .actionProductDetailsFragmentToWelcomeFragment())
                         else {
                             productDetailsViewModel.id.collect(cartViewModel::addToCart)
                             Toasty.success(requireContext(), R.string.added_to_cart).show()

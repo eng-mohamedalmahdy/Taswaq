@@ -22,6 +22,7 @@ class SeeAllCategoriesFragment : BaseFragment<FragmentSeeAllCategoriesBinding>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         viewLifecycleOwner.lifecycleScope.launchWhenCreated {
             viewModel.getCategoriesList.collect {
                 binding.categoriesList.adapter = CategoriesAdapter(it)
