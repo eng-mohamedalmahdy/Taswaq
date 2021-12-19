@@ -47,4 +47,7 @@
     <string name="address_lane">Address lane</string>
     <string name="name">Name</string>
     <string name="continue_to_payment">Continue To Payment</string>
+    <string name="addresses">Addresses</string>
+    <string name="cards">Cards</string>
+    <string name="update_profile">Update Profile</string>
 </resources>
