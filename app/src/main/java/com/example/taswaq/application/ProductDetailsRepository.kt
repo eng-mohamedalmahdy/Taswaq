@@ -7,7 +7,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class ProductDetailsRepository {
-    fun getProductDetailsModel(productId: Int): Flow<PresentationProductDetails> = flow {
-        emit(domainProductToPresentationProductDetails(dummyDomainProducts.first { productId == it.id }))
+    fun getProductDetailsModel(productId: Int): Flow<PresentationProductDetails> =
+        flow {
+             emit(domainProductToPresentationProductDetails(
+               dummyDomainProducts.first { productId == it.id }))
     }
 }

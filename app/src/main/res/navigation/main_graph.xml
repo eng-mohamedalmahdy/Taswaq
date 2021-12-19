@@ -116,11 +116,32 @@
         android:id="@+id/cartFragment"
         android:name="com.example.taswaq.presentation.cart.view.CartFragment"
         android:label="CartFragment"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
 
 
     <action
         android:id="@+id/action_to_cart"
         app:destination="@id/cartFragment"
         app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/createAddressFragment"
+        android:name="com.example.taswaq.presentation.address.view.CreateAddressFragment"
+        android:label="CreateAddressFragment" >
+        <action
+            android:id="@+id/action_createAddressFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.taswaq.presentation.address.view.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" >
+        <action
+            android:id="@+id/action_addressFragment_to_createAddressFragment"
+            app:destination="@id/createAddressFragment" />
+    </fragment>
 </navigation>
