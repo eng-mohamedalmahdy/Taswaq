@@ -2,8 +2,10 @@ package com.example.taswaq.application.adapters
 
 import com.example.taswaq.domain.model.DomainAddress
 import com.example.taswaq.domain.model.DomainProduct
+import com.example.taswaq.domain.model.DomainProfile
 import com.example.taswaq.presentation.common.model.PresentationProduct
 import com.example.taswaq.presentation.productdetails.model.PresentationProductDetails
+import com.example.taswaq.presentation.profile.model.PresentationProfile
 
 fun domainProductToPresentationProduct(domainProduct: DomainProduct) =
     PresentationProduct(
@@ -25,6 +27,12 @@ fun domainProductToPresentationProductDetails(domainProduct: DomainProduct) =
         productRate = domainProduct.rate
     )
 
- fun domainAddressToPresentationAddress(domainAddress: DomainAddress){
+fun domainProfileToPresentationProfile(domainProfile: DomainProfile) =
+    PresentationProfile(
+        firstName = domainProfile.firstname,
+        lastName = domainProfile.lastName,
+        email = domainProfile.email,
+        phoneNumber = domainProfile.phoneNumber
+    )
 
- }
+fun domainAddressToPresentationAddress(domainAddress: DomainAddress) {}

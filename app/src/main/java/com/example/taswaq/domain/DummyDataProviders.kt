@@ -2,6 +2,7 @@ package com.example.taswaq.domain
 
 import com.example.taswaq.domain.model.DomainAddress
 import com.example.taswaq.domain.model.DomainProduct
+import com.example.taswaq.domain.model.DomainProfile
 import com.example.taswaq.presentation.common.model.PresentationCategory
 import com.example.taswaq.presentation.myorders.model.PresentationOrder
 
@@ -130,8 +131,12 @@ val dummyDomainProducts = listOf(
 )
 
 val dummyOrders = listOf<PresentationOrder>()
+
 var dummyAddressList = mutableListOf<DomainAddress>(
-    DomainAddress("America","Albany Street",50.9,120.5,""),
-    DomainAddress("London","Baker Street",77.03,90.04,""),
-    DomainAddress("London","Robber Street",65.0,130.6,"")
+    DomainAddress("America", "Albany Street", 50.9, 120.5, ""),
+    DomainAddress("London", "Baker Street", 77.03, 90.04, ""),
+    DomainAddress("London", "Robber Street", 65.0, 130.6, "")
 )
+
+var dummyProfile =
+    DomainProfile("Ezreal", "Jaro Light Feather", "jarolightfeather@taswaq.com", "0128")

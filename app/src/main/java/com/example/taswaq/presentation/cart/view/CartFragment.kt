@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 private const val TAG = "CartFragment"
+
 class CartFragment : BaseFragment<FragmentCartBinding>() {
     override val layoutId = R.layout.fragment_cart
     override val drawerIcon = R.drawable.ic_back
@@ -30,9 +31,13 @@ class CartFragment : BaseFragment<FragmentCartBinding>() {
             viewLifecycleOwner.lifecycleScope.launchWhenCreated {
                 viewModel.getCartItems().collect(cartAdapter::submitList)
             }
-           continueBtn.setOnClickListener {
-               findNavController().navigate(CartFragmentDirections.actionCartFragmentToAddressFragment())
-           }
+            continueBtn.setOnClickListener {
+                findNavController().navigate(
+                    CartFragmentDirections.actionCartFragmentToAddressFragment(
+                        true
+                    )
+                )
+            }
         }
     }
 

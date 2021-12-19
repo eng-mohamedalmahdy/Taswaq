@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentAddressBinding
 import com.example.taswaq.presentation.address.viewmodel.AddressViewModel
@@ -18,13 +19,15 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddressFragment : BaseFragment<FragmentAddressBinding>() {
     override val layoutId: Int = R.layout.fragment_address
-    override val drawerIcon: Int? = R.drawable.ic_back
+    override val drawerIcon: Int = R.drawable.ic_back
     private val viewModel: AddressViewModel by viewModel()
+    private val args: AddressFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        with(binding){
+        with(binding) {
+
 
             viewLifecycleOwner.lifecycleScope.launchWhenCreated {
                 viewModel.getAddressList.collect {
@@ -32,8 +35,10 @@ class AddressFragment : BaseFragment<FragmentAddressBinding>() {
                 }
             }
             addAddressText.setOnClickListener {
-             findNavController().navigate(AddressFragmentDirections
-                                .actionAddressFragmentToCreateAddressFragment())
+                findNavController().navigate(
+                    AddressFragmentDirections
+                        .actionAddressFragmentToCreateAddressFragment()
+                )
             }
             continueToPayBtn.setOnClickListener {
 
@@ -42,7 +47,10 @@ class AddressFragment : BaseFragment<FragmentAddressBinding>() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.continueToPayBtn.visibility = if (args.isCheckingOut) View.VISIBLE else View.GONE
 
-
-
+    }
 }
+

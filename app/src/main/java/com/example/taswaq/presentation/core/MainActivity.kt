@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity() {
         mAppBarConfiguration = AppBarConfiguration.Builder(
             R.id.homeFragment,
             R.id.wishlistFragment,
-            R.id.ordersFragment
+            R.id.ordersFragment,
+            R.id.profileFragment
         )
             .setOpenableLayout(drawer)
             .build()
