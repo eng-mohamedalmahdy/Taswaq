@@ -3,12 +3,8 @@ package com.example.taswaq.domain.model
 import android.util.Log
 import com.example.taswaq.domain.dummyDomainProducts
 import com.example.taswaq.presentation.cart.model.PresentationCartItem
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.*
 
 
 private const val TAG = "DomainCart"
@@ -76,4 +72,3 @@ object DomainCart {
         }
     }
 }
-

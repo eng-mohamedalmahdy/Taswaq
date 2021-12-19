@@ -5,6 +5,7 @@ import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.taswaq.R
+import com.example.taswaq.application.HomeRepository
 import com.example.taswaq.application.constants.HomePageProductsListArgs.FEATURED
 import com.example.taswaq.application.constants.HomePageProductsListArgs.BEST_SELLER
 import com.example.taswaq.databinding.FragmentHomeBinding
@@ -14,6 +15,7 @@ import com.example.taswaq.presentation.core.BaseFragment
 import com.example.taswaq.presentation.home.HomeViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -23,7 +25,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override val layoutId = R.layout.fragment_home
     override val drawerIcon: Int = R.drawable.ic_menu
     private val homeViewModel: HomeViewModel by viewModel()
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
