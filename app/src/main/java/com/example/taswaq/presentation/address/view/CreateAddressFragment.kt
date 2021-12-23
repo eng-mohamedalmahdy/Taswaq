@@ -42,8 +42,13 @@ class CreateAddressFragment : BaseFragment<FragmentCreateAddressBinding>() {
                       // what action will be done here
                       findNavController().navigate(
                           CreateAddressFragmentDirections
-                              .actionCreateAddressFragmentToAddressFragment()
+                              .actionCreateAddressFragmentToAddressFragment(true)
                       )
+
+                      cityEt.setText("")
+                      streetEt.setText("")
+                      latEt.setText("")
+                      langEt.setText("")
                   }
               }
         }

@@ -50,4 +50,5 @@
     <string name="addresses">Addresses</string>
     <string name="cards">Cards</string>
     <string name="update_profile">Update Profile</string>
+    <string name="payment">Payment</string>
 </resources>

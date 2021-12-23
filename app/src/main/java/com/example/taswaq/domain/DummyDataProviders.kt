@@ -3,6 +3,7 @@ package com.example.taswaq.domain
 import com.example.taswaq.domain.model.DomainAddress
 import com.example.taswaq.domain.model.DomainProduct
 import com.example.taswaq.domain.model.DomainProfile
+import com.example.taswaq.domain.model.DomainVisa
 import com.example.taswaq.presentation.common.model.PresentationCategory
 import com.example.taswaq.presentation.myorders.model.PresentationOrder
 
@@ -30,7 +31,8 @@ val dummyDomainProducts = listOf(
         priceBeforeDiscount = 500.0,
         description = "Very very very",
         rate = 3.0,
-        rateCount = 20
+        rateCount = 20,
+        discount = 0.02
     ),
     DomainProduct(
         id = 1,
@@ -46,7 +48,8 @@ val dummyDomainProducts = listOf(
         priceBeforeDiscount = 300.0,
         description = "Very very very",
         rate = 5.0,
-        rateCount = 50
+        rateCount = 50,
+        discount = 0.06
     ),
     DomainProduct(
         id = 2,
@@ -62,7 +65,8 @@ val dummyDomainProducts = listOf(
         priceBeforeDiscount = 200.0,
         description = "Very very very",
         rate = 6.0,
-        rateCount = 30
+        rateCount = 30,
+        discount = 0.1
     ),
     DomainProduct(
         id = 3,
@@ -78,7 +82,8 @@ val dummyDomainProducts = listOf(
         priceBeforeDiscount = 600.0,
         description = "Very very very",
         rate = 9.0,
-        rateCount = 90
+        rateCount = 90,
+        discount = 0.05
     ),
     DomainProduct(
         id = 4,
@@ -94,7 +99,8 @@ val dummyDomainProducts = listOf(
         priceBeforeDiscount = 700.0,
         description = "Very very very",
         rate = 8.5,
-        rateCount = 70
+        rateCount = 70,
+        discount =  0.03
     ),
     DomainProduct(
         id = 5,
@@ -110,7 +116,8 @@ val dummyDomainProducts = listOf(
         priceBeforeDiscount = 200.0,
         description = "Very very very",
         rate = 7.0,
-        rateCount = 8
+        rateCount = 8,
+        discount = 0.09
     ),
     DomainProduct(
         id = 6,
@@ -126,7 +133,8 @@ val dummyDomainProducts = listOf(
         priceBeforeDiscount = 500.0,
         description = "Very very very",
         rate = 3.0,
-        rateCount = 20
+        rateCount = 20,
+        discount = 0.08
     ),
 )
 
@@ -140,3 +148,8 @@ var dummyAddressList = mutableListOf<DomainAddress>(
 
 var dummyProfile =
     DomainProfile("Ezreal", "Jaro Light Feather", "jarolightfeather@taswaq.com", "0128")
+
+var dummyVisaCardList = mutableListOf<DomainVisa>(
+    DomainVisa("100 234 500 798","21-2022-10","Mosaab Mohamed"),
+    DomainVisa("150 374 900 908","21-2022-10","Anas Mohamed")
+)
