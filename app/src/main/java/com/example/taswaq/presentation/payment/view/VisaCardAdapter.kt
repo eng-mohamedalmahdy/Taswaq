@@ -34,8 +34,11 @@ class VisaCardAdapter(var visaCardList: List<DomainVisa>):
         fun bind(domainVisa: DomainVisa) {
            with(binding){
                visaNo.text = domainVisa.visaNumber
-               visaDate.text = domainVisa.visaOutDate
                cardUsername.text = domainVisa.visaUserName
+               dayTv.text = domainVisa.visaDay
+               monthTv.text = domainVisa.visaMonth
+               yearTv.text = domainVisa.visaYear
+
            }
 
         }

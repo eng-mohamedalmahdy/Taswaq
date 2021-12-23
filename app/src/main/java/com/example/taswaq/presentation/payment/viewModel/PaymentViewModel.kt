@@ -9,8 +9,12 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class PaymentViewModel(val repository:PaymentRepository): ViewModel() {
-     fun addToVisaCrdList(domainVisa: DomainVisa) {
+     fun addToVisaCrdList(visaNumber:String,visaUserName:String,
+                          visaDay:String,visaMonth:String,visaYear:String){
+         val domainVisa= DomainVisa(visaNumber,visaDay,visaMonth,visaYear,visaUserName)
+
         repository.addToVisaList(domainVisa)
+
      }
 
     fun getSubTotalPrice(): Flow<Int> = repository.getCartItemsPrice()

@@ -9,73 +9,96 @@
     <androidx.cardview.widget.CardView
         android:layout_margin="@dimen/_8sdp"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_130sdp"
-        android:backgroundTint="@color/blue_374ABE"
+        android:layout_height="@dimen/_150sdp"
         app:cardCornerRadius="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
         app:cardElevation="8dp">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="@dimen/_12sdp"
-        android:paddingRight="@dimen/_12sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/visa"
+            android:paddingLeft="@dimen/_12sdp"
+            android:paddingRight="@dimen/_12sdp">
 
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-black"
-            android:text="VISA"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_18sdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/visa_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:inputType="number"
-            android:text="1000   2345  6000  7890"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_18ssp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/visa_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00/00-00/00"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"
-            app:layout_constraintTop_toBottomOf="@+id/visa_no"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteX="125dp"
-            tools:layout_editor_absoluteY="107dp" />
-
-        <TextView
-            android:id="@+id/card_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginBottom="28dp"
-            android:text="LOREM IPSUM"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_16ssp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/visa_date"
-            app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/visa_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1000   2345  6000  7890"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.618"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/dayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:text="01"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/monthTv"
+                app:layout_constraintHorizontal_bias="0.642"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visa_no"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/monthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:text="30"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/yearTv"
+                app:layout_constraintTop_toBottomOf="@+id/visa_no"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/yearTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:gravity="center"
+                android:text="2022"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visa_no"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/card_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="LOREM IPSUM"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.063"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>

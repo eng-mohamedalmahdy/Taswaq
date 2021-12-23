@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Kotlin Projects/Taswaq/app/src/main/res/layout/fragment_payment.xml" value="0.22037037037037038" />
-        <entry key="..\:/Kotlin Projects/Taswaq/app/src/main/res/layout/list_item_payment_card.xml" value="0.22037037037037038" />
+        <entry key="..\:/Kotlin Projects/Taswaq/app/src/main/res/layout/list_item_payment_card.xml" value="0.264" />
         <entry key="..\:/Kotlin Projects/Taswaq/app/src/main/res/layout/payment_dialog.xml" value="0.22037037037037038" />
+        <entry key="..\:/Kotlin Projects/Taswaq/app/src/main/res/layout/payment_dialog_fragment.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/circle_grey.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/drawable/dot_blue.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/drawable/dot_white.xml" value="0.19322916666666667" />
