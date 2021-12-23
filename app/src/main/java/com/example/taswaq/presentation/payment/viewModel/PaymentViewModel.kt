@@ -1,5 +1,6 @@
 package com.example.taswaq.presentation.payment.viewModel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.taswaq.application.CartRepository
 import com.example.taswaq.application.PaymentRepository
@@ -15,10 +16,9 @@ class PaymentViewModel(val repository:PaymentRepository): ViewModel() {
         repository.addToVisaList(domainVisa)
 
      }
-    val cartRepo = CartRepository()
 
-    fun getSubTotalPrice(): Flow<Int> = cartRepo.getCartItemsPrice()
+    fun getSubTotalPrice(): Flow<Int> = repository.getCartItemsPrice()
 
-    fun getVisaCardList() = repository.getVisaCardList().map { it.toList() }
+    fun getVisaCardList() = repository.getVisaCardList().also { Log.d("TAG", "getVisaCardList: $it") }.map { it.toList() }
 
 }
