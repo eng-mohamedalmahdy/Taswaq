@@ -41,6 +41,7 @@ class PaymentFragment : BaseFragment<FragmentPaymentBinding>() {
 
             val subTotal=  viewModel.getSubTotalPrice().collect( )
               subtotal.text = subTotal.toString()
+
           }
 
 
