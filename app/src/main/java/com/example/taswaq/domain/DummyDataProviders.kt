@@ -150,6 +150,7 @@ var dummyProfile =
     DomainProfile("Ezreal", "Jaro Light Feather", "jarolightfeather@taswaq.com", "0128")
 
 var dummyVisaCardList = mutableListOf<DomainVisa>(
-    DomainVisa("100 234 500 798","21-2022-10","Mosaab Mohamed"),
-    DomainVisa("150 374 900 908","21-2022-10","Anas Mohamed")
+    DomainVisa("100 234 500 798","21","12","2021","Mosaab Mohamed"),
+    DomainVisa("100 234 340 676","07","9","2019","Mohamed Ahmed"),
+    DomainVisa("150 374 900 908","10","11","2020","Anas Mohamed")
 )

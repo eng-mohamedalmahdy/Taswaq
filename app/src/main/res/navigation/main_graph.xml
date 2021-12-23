@@ -163,5 +163,14 @@
     <fragment
         android:id="@+id/paymentFragment"
         android:name="com.example.taswaq.presentation.payment.view.PaymentFragment"
-        android:label="PaymentFragment" />
+        android:label="PaymentFragment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_paymentDialogFragment"
+            app:destination="@id/paymentDialogFragment"
+            app:popUpTo="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentDialogFragment"
+        android:name="com.example.taswaq.presentation.payment.view.PaymentDialogFragment"
+        android:label="PaymentDialogFragment" />
 </navigation>
