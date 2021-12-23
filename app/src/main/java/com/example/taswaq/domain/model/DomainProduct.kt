@@ -9,5 +9,6 @@ data class DomainProduct(
     val priceBeforeDiscount: Double,
     val priceAfterDiscount: Double,
     val rate: Double,
-    val rateCount: Int
+    val rateCount: Int,
+    val discount: Double
 )

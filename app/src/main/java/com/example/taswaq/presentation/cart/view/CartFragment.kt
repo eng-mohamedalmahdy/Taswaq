@@ -9,6 +9,7 @@ import com.example.taswaq.databinding.FragmentCartBinding
 import com.example.taswaq.presentation.common.viewmodel.CartViewModel
 import com.example.taswaq.presentation.core.BaseFragment
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.toList
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 private const val TAG = "CartFragment"

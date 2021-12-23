@@ -27,9 +27,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
                 ProfileFragmentDirections.actionProfileFragmentToAddressFragment(false)
             }
             updateProfile.setOnClickListener {
-                viewModel.phoneNumber.value = phoneNumber.fullNumberWithPlus
-                if (viewModel.profileDataChanged()) {
-                    viewModel.updateProfile(password.contentAsString())
+                viewModel?.phoneNumber?.value = phoneNumber.fullNumberWithPlus
+                if (viewModel!!.profileDataChanged()) {
+                    viewModel!!.updateProfile(password.contentAsString())
                 } else {
                     findNavController().navigateUp()
                 }

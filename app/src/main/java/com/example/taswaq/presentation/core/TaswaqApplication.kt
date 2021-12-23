@@ -8,6 +8,7 @@ import com.example.taswaq.presentation.auth.signin.LogInViewModel
 import com.example.taswaq.presentation.common.viewmodel.CartViewModel
 import com.example.taswaq.presentation.home.HomeViewModel
 import com.example.taswaq.presentation.myorders.MyOrdersViewModel
+import com.example.taswaq.presentation.payment.viewModel.PaymentViewModel
 import com.example.taswaq.presentation.productdetails.view.ProductDetailsViewModel
 import com.example.taswaq.presentation.seeallcategories.SeeAllCategoriesViewModel
 import com.example.taswaq.presentation.seeproductsoftitle.SeeProductsOfTitleViewModel
@@ -70,4 +71,10 @@ val appModule = module {
     //Address
     single { AddressRepository() }
     viewModel { AddressViewModel(get()) }
+
+    //payment
+    single{PaymentRepository()}
+    viewModel { PaymentViewModel(get()) }
+
+
 }

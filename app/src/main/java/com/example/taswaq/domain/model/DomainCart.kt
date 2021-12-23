@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 
 object DomainCart {
@@ -26,11 +27,17 @@ object DomainCart {
                     productImageUrl = product.images.firstOrNull() ?: "",
                     productBrand = product.brand,
                     productUnitPrice = product.priceAfterDiscount,
-                    productQty = qty
+                    productQty = qty,
+                    discount = product.discount
                 )
             }
         }
     val cartItems = mutableCartItems
+
+    val cartItemsPrice = cartItems.map {
+        it.fold(0){ acc,product -> ((acc+product.productUnitPrice)).toInt() }
+    }
+
 
     val itemsCount = cartItems.map {
         it.fold(0) { acc, product -> acc + product.productQty }

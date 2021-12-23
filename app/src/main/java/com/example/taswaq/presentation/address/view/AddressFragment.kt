@@ -41,7 +41,9 @@ class AddressFragment : BaseFragment<FragmentAddressBinding>() {
                 )
             }
             continueToPayBtn.setOnClickListener {
-
+            findNavController()
+                .navigate(AddressFragmentDirections
+                    .actionAddressFragmentToPaymentFragment())
             }
         }
 
