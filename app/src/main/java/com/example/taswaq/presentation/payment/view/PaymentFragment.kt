@@ -32,6 +32,7 @@ class PaymentFragment : BaseFragment<FragmentPaymentBinding>() {
             viewLifecycleOwner.lifecycleScope.launchWhenCreated {
                 viewModel.getVisaCardList().collect {
                     paymentCardList.adapter = VisaCardAdapter(it)
+
                 }
             }
 
