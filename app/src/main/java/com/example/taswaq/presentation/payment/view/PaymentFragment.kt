@@ -12,11 +12,7 @@ import com.example.taswaq.databinding.PaymentDialogBinding
 import com.example.taswaq.domain.model.DomainVisa
 import com.example.taswaq.presentation.core.BaseFragment
 import com.example.taswaq.presentation.payment.viewModel.PaymentViewModel
-import es.dmoral.toasty.Toasty
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.withTimeout
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PaymentFragment : BaseFragment<FragmentPaymentBinding>() {
@@ -32,14 +28,14 @@ class PaymentFragment : BaseFragment<FragmentPaymentBinding>() {
                 showAddCardDialog()
             }
 
-            lifecycleOwner?.lifecycleScope?.launchWhenCreated {
+            viewLifecycleOwner.lifecycleScope.launchWhenCreated {
                 viewModel.getVisaCardList().collect {
                     paymentCardList.adapter = VisaCardAdapter(it)
                 }
             }
 
 
-          lifecycleOwner?.lifecycleScope?.launchWhenCreated {
+            viewLifecycleOwner.lifecycleScope.launchWhenCreated {
 
             val subTotal=  viewModel.getSubTotalPrice().collect( )
               subtotal.text = subTotal.toString()
@@ -52,33 +48,33 @@ class PaymentFragment : BaseFragment<FragmentPaymentBinding>() {
     }
 
     private fun showAddCardDialog() {
-      val dialogBinding : PaymentDialogBinding? = PaymentDialogBinding.inflate(
+      val dialogBinding : PaymentDialogBinding = PaymentDialogBinding.inflate(
           LayoutInflater.from(context),null,false,R.layout.payment_dialog
       )
 
     // val cardDialogView = LayoutInflater.from(context).inflate(R.layout.payment_dialog,null)
      val mBuilder = AlertDialog.Builder(context)
-                               .setView(dialogBinding?.root)
+                               .setView(dialogBinding.root)
      val mAlertDialog = mBuilder.show()
 
-        dialogBinding?.addVisaBtn?.setOnClickListener {
-            if(isValide(dialogBinding)) {
-                val visaNumber = dialogBinding?.visaNoEt.text.toString()
-                val visaDate = dialogBinding?.visaDateEt.text.toString()
-                val visaUserName = dialogBinding?.visaUsernameEt.text.toString()
+        dialogBinding.addVisaBtn.setOnClickListener {
+            if(isValid(dialogBinding)) {
+                val visaNumber = dialogBinding.visaNoEt.text.toString()
+                val visaDate = dialogBinding.visaDateEt.text.toString()
+                val visaUserName = dialogBinding.visaUsernameEt.text.toString()
                 val domainVisa = DomainVisa(visaNumber, visaDate, visaUserName)
                 viewModel.addToVisaCrdList(domainVisa)
             }
         }
 
-        dialogBinding?.cancelBtn?.setOnClickListener {
+        dialogBinding.cancelBtn.setOnClickListener {
             mAlertDialog.dismiss()
         }
 
     }
 
     // validate dialog data
-    private fun isValide(binding : PaymentDialogBinding?): Boolean {
+    private fun isValid(binding : PaymentDialogBinding?): Boolean {
         var valid = true
 
             val visaNumber = binding?.visaNoEt?.text.toString()

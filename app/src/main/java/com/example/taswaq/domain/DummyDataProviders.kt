@@ -140,7 +140,7 @@ val dummyDomainProducts = listOf(
 
 val dummyOrders = listOf<PresentationOrder>()
 
-var dummyAddressList = mutableListOf<DomainAddress>(
+var dummyAddressList = mutableListOf(
     DomainAddress("America", "Albany Street", 50.9, 120.5, ""),
     DomainAddress("London", "Baker Street", 77.03, 90.04, ""),
     DomainAddress("London", "Robber Street", 65.0, 130.6, "")
@@ -149,7 +149,7 @@ var dummyAddressList = mutableListOf<DomainAddress>(
 var dummyProfile =
     DomainProfile("Ezreal", "Jaro Light Feather", "jarolightfeather@taswaq.com", "0128")
 
-var dummyVisaCardList = mutableListOf<DomainVisa>(
+var dummyVisaCardList = mutableListOf(
     DomainVisa("100 234 500 798","21-2022-10","Mosaab Mohamed"),
     DomainVisa("150 374 900 908","21-2022-10","Anas Mohamed")
 )
