@@ -1,8 +1,7 @@
-package com.example.taswaq.presentation.core
+package com.example.taswaq.domain.core
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -19,7 +18,6 @@ import com.example.taswaq.R
 import com.example.taswaq.databinding.ActivityMainBinding
 import com.example.taswaq.presentation.common.viewmodel.CartViewModel
 import com.google.android.material.navigation.NavigationView
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel

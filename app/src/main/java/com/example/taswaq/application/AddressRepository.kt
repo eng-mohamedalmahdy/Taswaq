@@ -5,7 +5,6 @@ import kotlinx.coroutines.flow.flow
 
 class AddressRepository {
 
-    fun getAddressList() = flow{
-        emit(dummyAddressList)
-    }
+    fun getAddressList() = flow { emit(dummyAddressList) }
+
 }

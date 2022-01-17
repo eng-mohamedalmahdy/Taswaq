@@ -1,16 +1,12 @@
 package com.example.taswaq.presentation.payment.view
 
-import android.app.AlertDialog
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentPaymentBinding
-import com.example.taswaq.domain.model.DomainVisa
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 import com.example.taswaq.presentation.payment.viewModel.PaymentViewModel
 import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.viewModel

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.example.taswaq.R
+import com.example.taswaq.application.invertColor
 import com.example.taswaq.databinding.ListItemCategoryBinding
 
 
@@ -34,6 +35,7 @@ class CategoriesAdapter(var categories: List<PresentationCategory>) :
         fun bind(category: PresentationCategory) {
             with(binding) {
                 categoryName.text = category.name
+                categoryName.setTextColor(Color.parseColor(category.color).invertColor())
                 categoryColorOverlay.setBackgroundColor(Color.parseColor(category.color))
                 Glide
                     .with(root.context)

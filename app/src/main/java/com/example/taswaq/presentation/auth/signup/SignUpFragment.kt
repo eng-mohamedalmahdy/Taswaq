@@ -5,7 +5,7 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentSignUpBinding
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 
 class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
     override val layoutId = R.layout.fragment_sign_up

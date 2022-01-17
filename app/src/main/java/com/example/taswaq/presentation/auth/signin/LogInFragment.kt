@@ -5,7 +5,7 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentLogInBinding
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LogInFragment : BaseFragment<FragmentLogInBinding>() {

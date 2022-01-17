@@ -1,14 +1,11 @@
 package com.example.taswaq.presentation.myorders.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentMyOrdersBinding
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 import com.example.taswaq.presentation.myorders.MyOrdersViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map

@@ -5,7 +5,7 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentWelcomeBinding
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 
 class WelcomeFragment : BaseFragment<FragmentWelcomeBinding>() {
     override val layoutId = R.layout.fragment_welcome
