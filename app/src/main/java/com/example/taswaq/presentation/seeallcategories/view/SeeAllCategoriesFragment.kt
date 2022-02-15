@@ -7,8 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentSeeAllCategoriesBinding
 import com.example.taswaq.presentation.common.view.CategoriesAdapter
-import com.example.taswaq.presentation.common.view.ProductsAdapter
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 import com.example.taswaq.presentation.seeallcategories.SeeAllCategoriesViewModel
 import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.viewModel

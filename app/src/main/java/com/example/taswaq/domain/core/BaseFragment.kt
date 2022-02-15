@@ -1,4 +1,4 @@
-package com.example.taswaq.presentation.core
+package com.example.taswaq.domain.core
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.taswaq.R
 
 abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
 

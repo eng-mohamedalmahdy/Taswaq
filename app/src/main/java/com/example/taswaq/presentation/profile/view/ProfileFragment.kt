@@ -6,7 +6,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.taswaq.R
 import com.example.taswaq.application.contentAsString
 import com.example.taswaq.databinding.FragmentProfileBinding
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
@@ -15,14 +15,13 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
     override val drawerIcon: Int = R.drawable.ic_menu
     private val viewModel: ProfileViewModel by viewModel()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding.viewModel = viewModel
-    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         with(binding) {
+            this.viewModel = viewModel
             addresses.setOnClickListener {
                 ProfileFragmentDirections.actionProfileFragmentToAddressFragment(false)
             }

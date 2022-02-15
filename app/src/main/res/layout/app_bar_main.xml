@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context=".presentation.core.MainActivity">
+        tools:context=".domain.core.MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             app:elevation="0dp"

@@ -1,4 +1,4 @@
-package com.example.taswaq.application.constants
+package com.example.taswaq.domain.constants
 
 object HomePageProductsListArgs {
     const val FEATURED = "FEATURED"

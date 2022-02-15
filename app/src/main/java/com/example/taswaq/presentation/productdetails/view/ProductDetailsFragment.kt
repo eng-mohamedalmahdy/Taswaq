@@ -1,7 +1,6 @@
 package com.example.taswaq.presentation.productdetails.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -12,11 +11,10 @@ import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentProductDetailsBinding
 import com.example.taswaq.domain.isUserAuthenticated
 import com.example.taswaq.presentation.common.viewmodel.CartViewModel
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 import es.dmoral.toasty.Toasty
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel

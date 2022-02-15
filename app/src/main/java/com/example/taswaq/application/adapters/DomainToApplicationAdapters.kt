@@ -1,8 +1,10 @@
 package com.example.taswaq.application.adapters
 
 import com.example.taswaq.domain.model.DomainAddress
+import com.example.taswaq.domain.model.DomainCategory
 import com.example.taswaq.domain.model.DomainProduct
 import com.example.taswaq.domain.model.DomainProfile
+import com.example.taswaq.presentation.common.model.PresentationCategory
 import com.example.taswaq.presentation.common.model.PresentationProduct
 import com.example.taswaq.presentation.productdetails.model.PresentationProductDetails
 import com.example.taswaq.presentation.profile.model.PresentationProfile
@@ -33,6 +35,13 @@ fun domainProfileToPresentationProfile(domainProfile: DomainProfile) =
         lastName = domainProfile.lastName,
         email = domainProfile.email,
         phoneNumber = domainProfile.phoneNumber
+    )
+
+fun domainCategoryToPresentationCategory(domainCategory: DomainCategory) =
+    PresentationCategory(
+        domainCategory.name ?: "None",
+        domainCategory.color ?: "#374ABE",
+        domainCategory.image ?: ""
     )
 
 fun domainAddressToPresentationAddress(domainAddress: DomainAddress) {}

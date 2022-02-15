@@ -1,18 +1,14 @@
 package com.example.taswaq.presentation.address.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.taswaq.R
 import com.example.taswaq.databinding.FragmentAddressBinding
 import com.example.taswaq.presentation.address.viewmodel.AddressViewModel
-import com.example.taswaq.presentation.common.view.CategoriesAdapter
-import com.example.taswaq.presentation.core.BaseFragment
+import com.example.taswaq.domain.core.BaseFragment
 import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
